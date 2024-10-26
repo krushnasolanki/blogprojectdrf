@@ -13,24 +13,24 @@ hooks:
         timeout: 300
         runas: ubuntu
   AfterInstall:
-      - location: /home/ubuntu/blogprojectdrf/scripts/instance_os_dependencies.sh
+      - location: scripts/instance_os_dependencies.sh
         timeout: 300
         runas: ubuntu
-      - location: /home/ubuntu/blogprojectdrf/scripts/python_dependencies.sh
+      - location: scripts/python_dependencies.sh
         timeout: 300
         runas: ubuntu
-      - location: /home/ubuntu/blogprojectdrf/scripts/gunicorn.sh
+      - location: scripts/gunicorn.sh
         timeout: 300
         runas: ubuntu
-      - location: /home/ubuntu/blogprojectdrf/scripts/nginx.sh
+      - location: scripts/nginx.sh
         timeout: 300
         runas: ubuntu
   ApplicationStop:
-      - location: /home/ubuntu/blogprojectdrf/scripts/stop_app.sh
+      - location: scripts/stop_app.sh
         timeout: 300
         runas: ubuntu
   ApplicationStart:
-      - location: /home/ubuntu/blogprojectdrf/scripts/start_app.sh
+      - location: scripts/start_app.sh
         timeout: 300
         runas: ubuntu
   
